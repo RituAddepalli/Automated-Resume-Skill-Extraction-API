@@ -76,21 +76,11 @@ def match_skills(resume_text, target_skills):
 
 # =====================================================
 # API ENDPOINT
-# =====================================================
-# @app.route("/analyze", methods=["POST"])
-# def analyze_resume():
-
-#     if 'file' not in request.files:
-#         return jsonify({"error": "No file uploaded"}), 400
 @app.route("/analyze", methods=["POST"])
 def analyze_resume():
-    print("FILES RECEIVED:", request.files)
-    print("FORM RECEIVED:", request.form)
 
-    return jsonify({
-        "files_received": list(request.files.keys()),
-        "form_received": request.form.to_dict()
-    })
+    if 'file' not in request.files:
+        return jsonify({"error": "No file uploaded"}), 400
 
     file = request.files['file']
 
