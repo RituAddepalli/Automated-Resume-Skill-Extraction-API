@@ -1,0 +1,52 @@
+{
+  "info": {
+    "name": "Resume Skill Analyzer API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-9876543210ab",
+    "description": "Test your Resume Skill Analyzer API endpoints easily",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "https://automated-resume-skill-extraction-api.onrender.com/",
+          "protocol": "https",
+          "host": ["https://automated-resume-skill-extraction-api.onrender.com/","onrender","com"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Analyze Resume",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "path/to/sample_resume.pdf"
+            },
+            {
+              "key": "job_skills",
+              "type": "text",
+              "value": "python,sql,aws,flask,git"
+            }
+          ]
+        },
+        "url": {
+          "raw": "https://automated-resume-skill-extraction-api.onrender.com/",
+          "protocol": "https",
+          "host": ["https://automated-resume-skill-extraction-api.onrender.com/","onrender","com"],
+          "path": ["analyze"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
