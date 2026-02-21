@@ -1,3 +1,4 @@
+
 from flask import Flask, request, jsonify
 import re
 import fitz  # PyMuPDF
@@ -76,6 +77,7 @@ def match_skills(resume_text, target_skills):
 
 # =====================================================
 # API ENDPOINT
+# =====================================================
 @app.route("/analyze", methods=["POST"])
 def analyze_resume():
 
@@ -116,13 +118,7 @@ def home():
 # =====================================================
 # RUN APP
 # =====================================================
-# if __name__ == "__main__":
-#     print("Starting Resume Skill Matcher API...")
-#     app.run(debug=True, port=5000)
-import os
-
 if __name__ == "__main__":
     print("Starting Resume Skill Matcher API...")
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host="0.0.0.0", port=port)
+    app.run(debug=True, port=5000)
 
