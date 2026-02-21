@@ -28,7 +28,10 @@ jobs:
         pip install -r requirements.txt
         pip install pytest
 
-    # 4️⃣ Run tests
+    # 4️⃣ Set PYTHONPATH so tests can find app.py
+    - name: Set PYTHONPATH
+      run: echo "PYTHONPATH=$PWD" >> $GITHUB_ENV
+
+    # 5️⃣ Run tests
     - name: Run tests
-      run: |
-        pytest tests/ --maxfail=1 --disable-warnings -q
+      run: pytest tests/ --maxfail=1 --disable-warnings -q
