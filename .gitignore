@@ -1,1 +1,32 @@
-venv_resumeskill
+# ========================
+# Python
+# ========================
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+
+# ========================
+# Virtual environment
+# ========================
+venv_resumeskill/
+.env
+.env.*
+
+# ========================
+# OS-specific
+# ========================
+.DS_Store
+Thumbs.db
+
+# ========================
+# Python testing
+# ========================
+.pytest_cache/
+
+# ========================
+# VS Code / IDE
+# ========================
+.vscode/
+.idea/
