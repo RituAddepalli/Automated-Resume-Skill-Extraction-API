@@ -1,0 +1,18 @@
+# Web framework
+Flask==2.3.3
+
+# PDF parsing and OCR
+PyMuPDF==1.22.5  # replaces PyPDF2 + pdf2image
+pytesseract==0.3.13
+Pillow==9.5.0
+
+# Data processing
+pandas==2.1.1
+
+
+
+
+
+
+
+
