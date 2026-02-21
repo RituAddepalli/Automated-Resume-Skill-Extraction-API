@@ -15,6 +15,8 @@ pytesseract==0.3.13
 Pillow==9.5.0
 numpy==1.26.4
 pandas==2.1.1
+# the reportlab is only for ci tests 
+reportlab==3.6.14   # <-- Add this for tests
 
 
 
